@@ -1,9 +1,9 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
-//import HomePage from './components/HomePage';
+import HomePage from './components/HomePage';
+import Login from './components/Login';
 import AddStudent from './components/AddStudent';
-//import Login from './components/Login';
 
 
 
@@ -12,7 +12,9 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route path='/' element={<AddStudent/>} ></Route>
+          <Route path='/' element={<Login/>} ></Route>
+          <Route path='/Homepage' element={<HomePage/>} ></Route>
+          <Route path='/AddStudent' element={<AddStudent/>} ></Route>
         </Routes>
       </BrowserRouter>
     </div>
